@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-select, .sound-picker, .player-container{
+    height:100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*.time-select{
+    background:  linear-gradient(rgb(120, 34, 91),rgb(141, 194, 248));
+}
+.sound-picker{
+    background:  linear-gradient(rgb(83, 226, 126),rgb(248, 241, 141));
+}
+.player-container{
+    background: linear-gradient(rgb(230, 121, 175),rgb(224, 101, 53));
+    position: relative;
+}*/
+
+.player-container svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+.vid-container{
+    display: none;
+}
+.time-display{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: 50px;
+}
+.video-container video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -1;
+}
+.time-select button{
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: all 0.5s ease;
+    font-family:serif;
+}
+.time-select-click{
+    background: linear-gradient(rgb(83, 226, 126),rgb(248, 241, 141));
+}
+.time-select button:hover{
+    color: rgb(34, 15, 15);
+    background: white;
+    
+}
+.sound-picker button{
+   
+    width: 120px;
+   height: 120px;
+   
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+   padding: 30px;
+    transition: all 0.5s ease;
+}
+
+.sound-picker button:nth-child(1){
+    background: linear-gradient(rgb(83, 226, 126),rgb(248, 241, 141));
+}
+.sound-picker button:nth-child(2){
+    background: linear-gradient(rgb(230, 121, 175),rgb(224, 101, 53));
+}
+}
+.sound-picker button:hover{
+    background: transparent;
+ }
+ .sound-picker button img{
+     height: 100%;
+     
+ }
